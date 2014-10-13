@@ -1,9 +1,10 @@
-class CollectionMetadata < ActiveFedora::OmDatastream
+class Datastreams::BookMetadata < ActiveFedora::OmDatastream
 
   set_terminology do |t|
     t.root(path: "fields")
-    t.title(:index_as=>[:facetable, :sortable, :stored_searchable], :type=>:string)
-    t.about_statement(index_as: :stored_searchable)
+    t.title(index_as: :stored_searchable)
+    t.author(index_as: :stored_searchable)
+    t.publisher(index_as: :stored_searchable)
   end
 
   def self.xml_template
