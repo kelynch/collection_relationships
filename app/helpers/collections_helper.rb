@@ -9,7 +9,7 @@ module CollectionsHelper
 	def set_collection_link(document)
 		model = model_from_document(document)
 		if model != "Collection"
-			link_to "See all in this collection", "/?q=is_member_of_ssim:#{document['is_member_of_ssim'].to_sentence if document['is_member_of_ssim']}"
+			link_to "More like this", "/?q=is_member_of_ssim:#{document['is_member_of_ssim'].to_sentence if document['is_member_of_ssim']}"
 		end
 	end
 
